@@ -10,3 +10,4 @@ def test_post_request(base_url):
 def test_will_fail():
     assert 1 == 1
     # 测试 pollSCM 自动触发
+# 测试 webhook 实时触发
