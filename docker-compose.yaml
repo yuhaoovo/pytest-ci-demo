@@ -1,0 +1,18 @@
+services:
+  pytest:
+    build: .
+    container_name: xxx
+    environment:
+      - BASE_URL=http://host.docker.internal:80
+    volumes:
+      - ./reports:/app/reports
+
+  web:
+    image: nginx:latest
+    container_name: yyy
+    ports:
+      - "8080:80"
+    volumes:
+      - ./reports:/usr/share/nginx/html
+    depends_on:
+      - pytest
