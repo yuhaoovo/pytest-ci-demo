@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'docker build -pull=false -t ${IMAGENAME} .'
+                sh 'docker build --pull=false -t ${IMAGENAME} .'
             }
         }
         stage('Test') {
