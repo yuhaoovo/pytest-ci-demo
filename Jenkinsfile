@@ -27,7 +27,7 @@ pipeline {
             echo "构建完成，结果为${currentBuild.currentResult}"
             allure([
                 includeProperties: false,
-                jdk: ''
+                jdk: '',
                 results: [[path: 'ALLURE-RESULTS']]
             ])
         }
